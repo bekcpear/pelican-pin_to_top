@@ -18,6 +18,7 @@ def update_pinned_articles(generator):
         pin_article = False
         for slug in pin_articles_slugs:
             if slug == article.slug:
+                article.pin = True
                 pin_articles[slug] = article
                 pin_article = True
                 break
